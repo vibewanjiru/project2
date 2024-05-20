@@ -6,6 +6,6 @@ function isPalindrome(str) {
     return str === str.split('').reverse().join('');
 }
 
-// Example usage:
+// Example :
 console.log(isPalindrome("dad")); // Output: true
 console.log(isPalindrome("hello")); // Output: false
