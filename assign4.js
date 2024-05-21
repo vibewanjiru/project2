@@ -1,11 +1,21 @@
 function isPalindrome(str) {
-    // Remove any non-alphanumeric characters and convert to lowercase
+    
     str = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
     
-    // Compare the string with its reverse
-    return str === str.split('').reverse().join('');
+    let left = 0;
+    let right = str.length - 1;
+
+    while (left < right) {
+        if (str[left] !== str[right]) {
+            return false; // Not a palindrome
+        }
+        
+        left++;
+        right--;
+    }
+    return true; // The string is a palindrome
 }
 
-// Example :
-console.log(isPalindrome("dad")); // Output: true
-console.log(isPalindrome("hello")); // Output: false
+// Example:
+console.log(isPalindrome("dad")); 
+console.log(isPalindrome("hello")); 
